@@ -1,0 +1,1082 @@
+@import url("variables.less");
+@import url("mixins.less");
+@import url("typo.less");
+
+/*Project view and all other project views except issues*/
+/* Typohraphy @imported from due to a reference in view_project.less*/
+
+#projects-index {
+  margin: 2*@GGW 0 @GGW 0;
+  
+    ul.projects ul.projects {
+      border-left: 3px solid @border-color-gray; 
+      padding-left: 1em;
+      margin-left: 1em;
+    }
+    
+    ul.projects li.root {
+      padding: @GGW 0;
+      border-bottom: 1px solid @border-color;
+    }
+    
+    ul.projects li.child {
+      margin-top: @GGW;
+    }
+    
+    ul.projects div.root a.project {
+      font-size: 16px; 
+    }
+    
+    ul.projects .wiki.description {
+      margin-top: @GGW;
+    } 
+    
+    ul.projects div.root .child a {
+      font-size: @BFS !important;
+    }
+    
+    ul.projects li:before {
+    	position: relative;
+    	z-index: -1;
+    	top: 0.5*@GGW;
+    	float: right;
+    }
+    
+    ul.projects a.parent {
+      font-weight: bold;
+    }
+    
+    ul.projects li.fa {
+    	cursor: pointer;
+    }
+    
+    .wiki > p {
+      padding-left: 2*@GGW;
+    } 
+}
+
+ul.projects {
+  margin:0; 
+  padding-left: 2*@GGW;
+  
+    ul {
+      padding-left: 1.6em;
+    }
+    
+    &.root {
+      margin:0; 
+      padding:0;
+    }
+    
+    li {
+      list-style-type:none;
+    }
+}
+
+#notified-projects > ul, 
+#tracker_project_ids > ul, 
+#custom_field_project_ids > ul {
+  max-height: 250px; 
+  overflow-y: auto;
+}
+
+
+/* ------------ Documents ------------ */
+
+.controller-documents {
+
+  &.action-show #content .wiki {
+    padding-left: 0;
+  }
+  
+  #content .wiki {
+    margin-bottom: 2*@GGW;
+    padding-left: @GGW;   
+    padding-bottom: @GGW;
+  }
+  
+  div.attachments .delete {
+    margin-left: 2*@GGW;
+  }
+  
+  #content .wiki {
+    border-bottom: 1px solid @border-color;
+  }
+  
+  #content p em {
+    font-size: 80%;  
+  }
+  
+  #content > h2 + h3 {
+    font-size: 1.2*@BFS;
+  }
+  
+  #content h4 {
+    margin-bottom: 0;
+  }
+  
+  #content h4 + p {
+    color: @gray-light;
+  }
+  
+  .toggle-wrap {
+    margin-right: 0.5*@GGW;
+    line-height: 1.5;
+  }
+  
+  .toggle-wrap:after {
+    content: '|';
+    margin-left: 0.5*@GGW;
+  }
+}
+
+.controller-attachments.action-show .autoscroll {
+  clear: both;
+}
+
+/* ------------ Tab content ------------ */
+
+#tab-content-versions, 
+#tab-content-categories, 
+#tab-content-activities {
+  overflow: auto;
+}
+
+#tab-content-members .splitcontentleft, 
+#tab-content-members .splitcontentright {
+  border: none;
+  padding: 0;
+}
+
+#tab-content-modules fieldset p {
+  margin: 0.5*@GGW 0 0.5*@GGW 0;
+}
+
+#tab-content-members .splitcontentleft, #tab-content-memberships .splitcontentleft, #tab-content-users .splitcontentleft {
+  width: 64%;
+}
+
+#tab-content-members .splitcontentright, #tab-content-memberships .splitcontentright, #tab-content-users .splitcontentright {
+  width: 34%;
+}
+
+#tab-content-members fieldset, #tab-content-memberships fieldset, #tab-content-users fieldset {
+  padding: @GGW; 
+  margin-bottom: @GGW;
+}
+
+#tab-content-members fieldset legend, #tab-content-memberships fieldset legend, #tab-content-users fieldset legend {
+  font-weight: bold;
+}
+
+#tab-content-members fieldset label, #tab-content-memberships fieldset label, #tab-content-users fieldset label {
+  display: block;
+}
+
+#tab-content-members #principals, #tab-content-users #principals {
+  max-height: 400px; 
+  overflow: auto;
+}
+
+#tab-content-memberships .splitcontentright select {
+  width:90%
+}
+
+#principals > label {
+  clear: both;
+  display: block;
+}
+
+/* ------------ Watchers ------------ */
+
+#watchers {
+    
+    select {
+      width: 95%; 
+      display: block;
+    }
+    
+    a.delete {
+      opacity: 0.4; 
+      vertical-align: middle;
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      font-size: 0;
+      color: transparent;
+    }
+    
+    a.delete:hover {
+      opacity: 1;
+    }
+    
+    img.gravatar {
+      margin: 0 0.5*@GGW 0.5*@GGW 0;
+    }  
+}
+
+span#watchers_inputs {
+  overflow: auto; 
+  display: block;
+}
+
+span.search_for_watchers {
+  display:block;
+  clear: both;
+}
+
+span.add_attachment {
+  font-size: 80%;
+}
+
+span.search_for_watchers a, span.add_attachment a {
+  padding: @GGW 0 @GGW 0; 
+}
+
+/* ------------ Toggle and hide descriptions ------------ */
+
+.toggle-wrap {
+  cursor: pointer;
+}
+
+.controller-news,
+.controller-documents {
+  
+  .toggle-wrap {
+    margin-right: 0.5*@GGW;
+  }
+  
+  .toggle-wrap:after {
+    content: '|';
+    margin-left: 0.5*@GGW;
+  }
+  
+  
+}
+
+
+
+.controller-projects.action-show {
+  .splitcontentleft > ul {
+    margin: 0;
+    padding: 0 0 @GGW @GGW;
+  }
+  
+  .splitcontentleft, .splitcontentright {
+    .box {
+      margin-bottom: @GGW;
+      margin-top: @GGW;
+    }
+    
+    .box.news p {
+      margin-bottom: 2*@GGW;
+    }
+  }
+}
+
+.controller-projects.action-index {
+  
+  .toggle-wrap {
+    margin-right: 0.5*@GGW;
+  }
+  
+  .toggle-wrap:after {
+    content: '|';
+    margin-left: 0.5*@GGW;
+  }
+}
+
+.controller-news {
+  margin-bottom: 2*@GGW;
+    
+    /*Redmine prior to 3.1 does not have .news-article div*/
+    
+    h3 {
+      .h4;
+      margin-bottom: 0;
+      padding-top: @GGW;
+    }
+    
+    #content .wiki {
+      border-bottom: 1px solid @border-color;
+      padding: 0 @GGW @GGW 0;  
+    }
+    
+    .wiki p {
+      padding-left: @GGW;
+      margin-top: @GGW;
+    }
+    
+    .author {
+      margin: 0;
+      padding: 0;
+      font-size: 80%;
+      font-style: italic;
+    }
+    
+    &.action-show #content {
+      
+      > p em, .author {
+        font-size: 80%;
+        padding-left: 0;
+      }
+      
+      .wiki p {
+        padding-left: 0;
+      }
+    }
+}
+
+/* ------------ Activity ------------ */
+
+#activity, #search-results {
+
+    dd {
+      margin: @GGW 0.5*@GGW; 
+      padding-left: 6*@GGW; 
+      font-size: 90%; 
+    }   
+    
+    dt {
+      margin-bottom: 0px; 
+      padding-left: 2*@GGW; 
+      background-position: 0 50%; 
+      background-repeat: no-repeat; 
+    } 
+    
+    dd .description, dd .description {
+      font-style: italic; 
+    }
+    
+    span.project:after, span.project:after {
+      content: " -"; 
+    }
+    
+    dd span.description, dd span.description {
+      display:block; 
+    }
+}
+
+#activity {
+
+    dt.me .time {
+      border-bottom: 1px solid @border-color-gray; 
+    }  
+    
+    dt .time {
+      font-size: 80%;
+      margin-right: @GGW;
+    }
+    
+    dt .time:after {
+      content: ':';
+    }
+    
+    dt.grouped {
+      margin-left: 5em;
+    }
+    
+    dd.grouped {
+      margin-left: 9em;
+    }
+    
+    dl {
+      border-left: 1px solid @border-color;
+      margin: 0;
+      padding: @GGW 0 @GGW @GGW;
+    }
+    
+    > h3, > h4 {
+      border-left: 1px solid @border-color;
+      position: relative;
+      margin: 0;
+      padding: 8px 0 @GGW 2*@GGW;
+    }
+    
+    > h4 {
+      padding-top: 12px;
+    }
+    
+    > h3:before, > h4:before {
+      content: '\25CF';
+      position: absolute;
+      color: darken(@border-color,30%);
+      left: -8px;
+      top: 2px;
+      font-size: 25px;
+    }
+    
+    > h3:after, > h4:after  {
+      content: '\25CF';
+      position: absolute;
+      color: @black;
+      left: -4px;
+      top: 12px;
+      font-size: 11px;
+    }
+}
+
+
+#search-results dd {
+  margin-bottom: 1em; 
+  padding-left: 2*@GGW; 
+  margin-left: 0px; 
+}
+
+div#search-results-counts {
+  float:right;
+  
+    ul {
+      margin-top: @GGW; 
+    }
+    
+    li {
+      list-style-type: none; 
+      float: left; 
+      margin-left: 2*@GGW;
+    }
+}
+
+/* ------------ Roadmap ------------ */
+
+div#roadmap {
+    
+    .related-issues {
+      margin-bottom: 2*@GGW; 
+    }
+    
+    .related-issues td.checkbox {
+      display: none; 
+    }
+    
+    .wiki h1:first-child {
+      display: none; 
+    }
+    
+    .wiki h1 {
+      font-size: 120%; 
+    }
+    
+    .wiki h2 {
+      font-size: 110%; 
+    }  
+    
+    .version-article {
+      border-left: 1px solid @border-color;
+      margin: 0;
+      padding: @GGW 0;
+    }
+    
+    .version-article p,
+    .version-article h1 {
+      padding-left: 3*@GGW;
+    }
+    
+    .version-article table.progress {
+      margin-left: 3*@GGW;
+    }
+    
+    table {
+      margin-left: 3*@GGW;
+      max-width: 90% !important;
+    }
+    
+    table.progress {
+      margin-left: 0;
+      width: 40em;
+    }
+    
+    table.progress td {
+      padding: 0;
+      height: 0.5*@GGW;
+      box-sizing: border-box;
+    }
+    
+    table.list td {
+      padding: 0.5*@GGW;
+    }
+        
+    header {
+      position: relative;
+      margin: 0;
+      padding: 0.5*@GGW 0 0 2*@GGW;
+    }
+    
+    header:before {
+      content: '\25CF';
+      position: absolute;
+      color: darken(@border-color,30%);
+      left: -8px;
+      top: 2px;
+      font-size: 25px;
+    }
+    
+    header:after  {
+      content: '\25CF';
+      position: absolute;
+      color: @black;
+      left: -4px;
+      top: 14px;
+      font-size: 11px;
+    }
+}
+
+body.controller-versions.action-show div#roadmap .related-issues {
+  width:70%;
+}
+
+div#version-summary {
+
+  width: 30%;
+  min-width: 300px; 
+  margin: 2*@GGW 0; 
+  background-color: @white;  
+    
+    fieldset {
+      margin-bottom: 2*@GGW; 
+    }
+    
+    fieldset.time-tracking table {
+      width:100%; 
+    }
+    
+    th, td.total-hours {
+      text-align: right; 
+    }
+}
+
+table#time-report {
+
+    td.hours, th.period, th.total {
+      text-align: right; 
+      padding-right: @GGW;
+    }
+    
+    tbody tr.subtotal {
+      font-style: italic; 
+    }
+    
+    tbody tr.subtotal td.hours { 
+      color: @gray; 
+    }
+    
+    tbody tr.total {
+      font-weight: bold;
+      background-color: @gray-lighter; 
+      border-top: 1px solid @border-color;
+    }
+    
+    .hours-dec {
+      font-size: 90%; 
+    }  
+}
+
+/* ------------ Wiki ------------ */
+
+.controller-wiki {
+     
+     div.wiki-page {
+       float: left;
+       width: 100%;
+     }
+     
+     div.wiki-page .contextual a {
+       opacity: 0.4;
+     }
+     
+     div.wiki-page .contextual a:hover {
+       opacity: 1;
+     }
+     
+     #add_attachment_form {
+       clear: both;
+     }    
+     
+     a#attach_files_link {
+       clear: both;
+       float: left;
+     }
+       
+     div.attachments .delete {
+       margin-left: 2*@GGW;
+     }  
+     
+     .attachments .contextual {
+       padding: 0.5*@GGW 0.5*@GGW 0 0;
+     }
+}
+
+form#add_attachment_form {
+  display: block;
+  float: left;
+  margin-top: 2*@GGW;
+}
+
+#attachments_fields {
+  clear: both;
+  display: block;
+}
+
+/* ------------ Wiki ------------ */
+
+div.wiki {
+    
+    table {
+      border-collapse: collapse;
+      margin-bottom: @GGW;
+    }
+    
+    table, td, th {
+      border: 1px solid @border-color;
+      padding: 0.5*@GGW;
+    }
+    
+    .noborder, .noborder td, div.wiki .noborder th {
+      border:0;
+    }
+    
+    .external {
+      background-position: 0% 60%;
+      background-repeat: no-repeat;
+      padding-left: 0.5*@GGW !important;
+      background-image: url(../../../../images/external.png);
+    }
+    
+    ul, ol {
+      margin-bottom: @GGW;
+      padding-left: 2*@GGW;
+    }
+    
+    pre {
+      margin: @GGW @GGW @GGW 2*@GGW;
+      padding: @GGW;
+      background-color: @query-form;
+      border: 1px solid @border-color;
+      width: auto;
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+    
+    ul.toc {
+      background-color: @highlight-blue;
+      border: 1px solid @border-color;
+      padding: 0.5*@GGW;
+      margin-bottom: @GGW;
+      margin-right: @GGW;
+      margin-left: 0;
+      display: table;
+    }
+    
+    ul.toc.right {
+      float: right; 
+      margin-left: @GGW; 
+      margin-right: 0; 
+      width: auto; 
+    }
+    
+    ul.toc.left  {
+      float: left; 
+      margin-right: @GGW; 
+      margin-left: 0; 
+      width: auto; 
+    }
+    
+    ul.toc ul {
+      margin: 0; 
+      padding: 0; 
+    }
+    
+    ul.toc li {
+      list-style-type: none; 
+      margin: 0; 
+      font-size:12px;
+    }
+    
+    ul.toc li li {
+      margin-left: 2*@GGW; 
+      font-size: 12px;
+    }
+    
+    ul.toc a {
+      font-size: 90%;
+      font-weight: normal;
+      text-decoration: none;
+    }
+    
+}
+
+* html div.wiki ul.toc {
+  width: 50%; 
+} /* IE6 doesn't autosize div */
+
+
+a.wiki-anchor {
+  display: none; 
+  margin-left: 0.5*@GGW; 
+  text-decoration: none; 
+}
+
+a.wiki-anchor:hover {
+  text-decoration: none; 
+}
+
+h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor {
+  display: inline; 
+}
+
+div.wiki img { 
+  vertical-align: middle; 
+}
+
+.handle {
+  cursor: move;
+}
+
+a.close-icon {
+  display: block;
+  margin-top: 0.5*@GGW;
+  overflow: hidden;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-image: url('../../../../images/close.png');
+}
+
+a.close-icon:hover {
+  background-image: url('../../../../images/close_hl.png');
+}
+
+
+/* ------------ Calendar ------------ */
+
+.controller-calendars .autoscroll {
+  padding-bottom: 150px;
+}
+
+.cal {
+  
+  span.icon, div.issue {
+    padding: 0.5*@GGW;
+    margin: 0.5*@GGW;
+    border: 1px solid @border-color;
+    display: block;
+  }  
+  
+  div.issue {
+    background: lighten(@gray-lighter,5%);
+  }
+}
+
+table.cal {
+  border-collapse: collapse; 
+  width: 100%; 
+  margin: 0px 0 0.5*@GGW 0;
+  border: 1px solid @border-color;
+    
+    thead th {
+      width: 14%; 
+      background-color: @gray-lighter;
+      padding: 0.5*@GGW; 
+    }
+    
+    thead th.week-number {
+      width: auto;
+    }
+    
+    tbody tr {
+      height: 100px;
+    }
+    
+    td {
+      border: 1px solid @border-color-gray; 
+      vertical-align: top; 
+      font-size: 90%;
+    }
+    
+    td.week-number {
+      background-color: @gray-lighter; 
+      padding: 0.5*@GGW; 
+      border: none; 
+    }
+    
+    td p.day-num {
+      text-align: right;
+    }
+    
+    td.odd p.day-num {
+      color: @text-color;
+    }
+    
+    td.today {
+      background: @highlight-blue;
+    }
+    
+    td.today p.day-num {
+      font-weight: bold;
+    }  
+}
+
+p.cal.legend {
+  margin-top: -100px;
+}
+
+p.cal.legend span {
+  display:block;
+}
+
+
+
+/* ------------ Gantt chart ------------ */
+
+.controller-gantts fieldset.collapsible div.autoscroll {
+  padding: 0;
+  margin: 0;
+}
+
+#query_form .buttons {
+    
+    .clear {
+      margin-top: @GGW;
+      min-height: 1px;
+    }
+}
+
+.gantt_hdr {
+  position: absolute;
+  top: 0;
+  height: 16px;
+  border-top: 1px solid @gray-lighter;
+  border-bottom: 1px solid @border-color-gray;
+  border-right: 1px solid @border-color-gray;
+  text-align: center;
+  overflow: hidden;
+}
+
+.gantt_hdr.nwday {
+  background-color: @query-form;
+}
+
+.gantt_subjects {
+  font-size: 90%; 
+  
+  div { 
+    line-height: 16px;
+    height: 16px;
+    overflow: hidden; 
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+    padding-left: 2*@GGW;
+  }
+}
+
+.task {
+  position: absolute;
+  height: 8px;
+  font-size: 90%;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.task.label {
+  width: 100%;
+}
+
+.task.label.project, .task.label.version {
+  font-weight: bold; 
+}
+
+.task_late {
+  background: lighten(@red,40%); 
+  border: 1px solid lighten(@red,20%); 
+}
+
+.task_done { 
+  background: lighten(@green,30%); 
+  border: 1px solid @green; 
+}
+
+.task_todo { 
+  background: @gray-lighter;
+  border: 1px solid @gray-light; 
+}
+
+.task_todo.parent { 
+  background: @gray; 
+  border: 1px solid @gray; 
+  height: 3px;
+}
+
+.task_late.parent, .task_done.parent { 
+  height: 3px;
+}
+
+.task.parent.marker.starting  {
+  position: absolute; 
+  background: url(../../../../images/task_parent_end.png) no-repeat 0 0; 
+  width: 8px; 
+  height: 16px; 
+  margin-left: -4px; 
+  left: 0px; 
+  top: -1px;
+}
+
+.task.parent.marker.ending {
+  position: absolute; 
+  background: url(../../../../images/task_parent_end.png) no-repeat 0 0; 
+  width: 8px; 
+  height: 16px; 
+  margin-left: -4px; 
+  right: 0px; 
+  top: -1px;
+}
+
+.version.task_late { 
+  background: @red url(../../../../images/milestone_late.png); 
+  border: 1px solid @red; 
+  height: 2px; 
+  margin-top: 3px;
+}
+
+.version.task_done { 
+  background: @green url(../../../../images/milestone_done.png); 
+  border: 1px solid @green;
+  height: 2px; 
+  margin-top: 3px;
+}
+
+.version.task_todo { 
+  background: @white url(../../../../images/milestone_todo.png); 
+  border: 1px solid @white; 
+  height: 2px; 
+  margin-top: 3px;
+}
+
+.version.marker { 
+  background-image: url(../../../../images/version_marker.png); 
+  background-repeat: no-repeat; 
+  border: 0; 
+  margin-left: -4px; 
+  margin-top: 1px; 
+}
+
+.project.task_late { 
+  background:#f66 url(../../../../images/milestone_late.png); 
+  border: 1px solid @blue; 
+  height: 2px; 
+  margin-top: 3px;
+}
+
+.project.task_done { 
+  background: @green url(../../../../images/milestone_done.png); 
+  border: 1px solid @green; 
+  height: 2px; 
+  margin-top: 3px;
+}
+
+.project.task_todo { 
+  background: @white url(../../../../images/milestone_todo.png); 
+  border: 1px solid @white; 
+  height: 2px; 
+  margin-top: 3px;
+}
+
+.project.marker { 
+  background-image: url(../../../../images/project_marker.png);
+  background-repeat: no-repeat; 
+  border: 0; 
+  margin-left: -4px; 
+  margin-top: 1px; 
+}
+
+.version-behind-schedule a, .issue-behind-schedule a {
+  color: @orange-light;
+}
+.version-overdue a, .issue-overdue a, .project-overdue a {
+  color: @red;
+}
+
+#new_membership fieldset.box legend > a {
+  position: relative;
+  top: 3px;
+  left: 3px;
+}
+
+/* ------------ Forum ------------ */
+
+.controller-messages {
+
+    div.attachments, div.attachments > p {
+      float: none;
+    }
+    
+    .message.details {
+      margin-top: 49.75px;
+    }
+}
+
+div.message div.attachments a.delete {
+  margin-left: @GGW;
+}
+
+div.message + p {
+  padding-left: @GGW;
+}
+
+#topic_search {
+  font-size: 12px !important;
+}
+
+/* ------------ Projects list ------------ */
+
+body.projects_list {
+  
+  #query_form {
+    padding-top: @GGW;
+  }
+  
+  #content > .contextual {
+    padding: @GGW;
+  }
+}
+
+/* ------------ Repositories ------------ */
+
+.controller-repositories {
+  
+  tr span.expander {
+    padding: 0 0 0 @GGW;
+  }
+  
+  tr.file td {
+    padding-left: @GGW !important;
+  }
+  
+  table.list {
+    
+    td, th {
+      padding: 0.5*@GGW 0 0.5*@GGW @GGW;
+    }
+  }
+  
+  table.list.changesets td {
+    padding: 0.5*@GGW;
+  }
+}
+
+/* ------------ Activities ------------ */
+
+.controller-activities #sidebar {
+  
+  #with_subprojects {
+    margin-left: 14px;
+  }
+}
+
+
+/* ------------ Workflows ------------ */
+
+.controller-workflows form p a .toggle-multiselect {
+  display: none;
+}

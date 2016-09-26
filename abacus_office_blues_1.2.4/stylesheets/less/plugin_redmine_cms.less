@@ -1,0 +1,28 @@
+@import url("variables.less");
+@import url("mixins.less");
+
+/* ------------ Styles for Redmine CMS plugin ------------ */
+
+#top-menu {
+  
+  #account.cms > ul > li {
+    height: auto !important;
+  }
+  
+  #account.cms > ul > li ul {
+    border: none;
+  }
+  
+  #account.cms a:hover:before {
+    color: @icon-color !important;
+  }
+  
+  #account:hover .menu-children,
+  #account:focus .menu-children {
+    display: block;
+  }
+  
+  ul.menu-children > li {
+    padding: 0 !important;
+  }
+}

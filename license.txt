@@ -1,0 +1,36 @@
+License
+
+The non-commercial plan of the theme (1 time, 6 months, 12 months) are distributed under Creative Commons license. See http://creativecommons.org/licenses/by-nc/4.0/. 
+
+You are free to:
+Share — copy and redistribute the material in any medium or format
+Adapt — remix, transform, and build upon the material 
+
+
+Under the following terms:
+Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+
+NonCommercial — You may NOT use the material for commercial purposes, i.e. selling the theme as a standalone product to 3rd parties, using it in a Redmine instance that is commercially distributed to your clients (hosted Redmine), selling it as a part of a downloadable Redmine instance. 
+
+
+
+
+
+
+
+
+
+
+The commercial plan of the theme (12 months+) is distributed under Abacus License.
+
+You are free to:
+Share — copy and redistribute the material in any medium or format
+Adapt — remix, transform, and build upon the material 
+
+
+Under the following terms:
+Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+
+Commercial — You may use the material for commercial purposes, i.e. using it in a Redmine instance that is commercially distributed to your clients (hosted Redmine). 
+
+You may NOT sell the theme as a standalone product to 3rd parties and sell it as a part of a downloadable Redmine instance. 

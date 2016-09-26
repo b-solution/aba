@@ -1,0 +1,87 @@
+@import url("variables.less");
+@import url("mixins.less");
+
+/*Login*/
+
+#login-form {
+     .rounded;
+      margin: 0 auto;
+      padding: 1em;
+      border: 1px solid @border-color;
+      background-color: @query-form; 
+      max-width: 340px;
+    
+    table td {
+      padding: 0.5*@GGW;
+    }
+    
+    label {
+      font-weight: bold;
+    }
+    
+    input#username, input#password, input#openid_url {
+      width: 200px;
+      box-sizing: border-box;
+    }
+    
+    input#password {
+      border: 1px solid @border-color-gray;
+    }
+    
+    &.tableless {
+      padding: 2*@GGW 4*@GGW;
+      
+      label {
+        display: block;
+      }
+      
+      #username {
+        margin-bottom: @GGW;
+      }
+      
+      input#username, 
+      input#password, 
+      input#openid_url {
+        width: 100%;
+      }
+      
+      input[type="submit"], a {
+        display: block;
+      } 
+      
+      input[type="submit"]  {
+        margin-top: @GGW;
+      }
+    }
+    
+    
+    a {
+      font-size: 12px;
+    }
+}
+
+body.action-login {
+   
+   h1 {
+     display: none;
+   }
+   
+   #footer {
+     color: @text-color;
+     border-top: none;
+   }
+   
+   #footer a {
+     color: @red;
+   }
+   
+   #quick-search {
+     padding-right: 0.5*@GGW !important;
+   } 
+}
+
+@media (max-width: 420px) {
+  #login-form.tableless {
+    max-width: none;
+  }
+}

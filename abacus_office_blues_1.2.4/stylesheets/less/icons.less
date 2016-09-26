@@ -1,0 +1,388 @@
+@import url("variables.less");
+@import url("mixins.less");
+
+.fa:before {
+  font-size: 16px !important;
+  color: @icon-color;
+  margin-right: 8px;
+  -webkit-font-smoothing: grayscale !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+.fa {
+  font-family: @font-family-base !important;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  -moz-osx-font-smoothing: auto !important;
+  font-smooth: auto !important;
+}
+
+#wrapper #top-menu .fa {
+  display: inline !important;
+}
+
+.fa:before, 
+#header #main-menu li a.new-issue:before, 
+#quick-search label a:before, 
+.toggle-multiselect:before, 
+a.remove-upload:before, 
+#account .icon-stop:before, 
+.icon-start:before, 
+.contextual .icon-stop:before,
+.checklist-item span.icon-add:before,
+.icon.found.icon-checked:before,
+.icon.unknown:before,
+.icon.found.icon-warning:before,
+#top-menu a.home:before,
+#top-menu a.my-page:before,
+#top-menu a.projects:before,
+#top-menu a.issues:before,
+#top-menu a.spent_time:before,
+#top-menu a.administration:before,
+#top-menu a.help:before,
+.js-general-menu a.easy-gantt:before,
+#rdb-refresh:before,
+.rdb-checkbox-link:before,
+#rdb-reset:before,
+#rdb-option-fullscreen:before,
+.sort-handle:before {
+  margin-right: 8px;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+}
+
+/* Top menu */
+#top-menu a.home:before {
+  content: "\f015";
+}
+
+#top-menu a.my-page:before {
+  content: "\f0e4";
+}
+
+#top-menu a.projects:before {
+  content: "\f03a";
+}
+
+#top-menu a.issues:before{
+  content: "\f0ae";
+}
+
+#top-menu a.spent_time:before {
+  content: "\f017";
+}
+
+#top-menu a.administration:before {
+ content: "\f013"; 
+}
+
+#top-menu a.help:before {
+ content: "\f1cd"; 
+}
+
+.js-general-menu a.easy-gantt:before {
+  content: "\f1fe";
+}
+
+/* Top menu */
+
+
+
+/*Plugin Dashboard*/
+
+#rdb-refresh:before,
+#rdb-reset:before {
+  content: "\f021";
+}
+
+.rdb-checkbox-link:before {
+  content: "\f00c";
+  color: @icon-color;
+}
+
+.rdb-checkbox-link.rdb-checkbox-link-enabled:before {
+  color: @green; 
+}
+
+#rdb-option-fullscreen:before {
+  content: "\f0b2";
+}
+
+/*Plugin Dashboard*/
+
+.sort-handle:before {
+  content: "\f07d";  
+}
+
+.icon.found.icon-checked:before {
+  content: "\f00c";
+  font-size: 16px;
+  color: @green;
+}
+
+.icon.unknown:before {
+  content: "\f059";
+  font-size: 16px;
+  color: @blue;
+}
+
+.icon.found.icon-warning:before {
+  content: "\f071";
+  font-size: 16px;
+  color: @orange;
+}
+
+
+/*New and edit issue: add plus icon and remove image */
+.edit_issue .splitcontentleft, .new_issue .splitcontentleft {
+  p + p + p {
+  
+    a {
+      margin-right: 8px;
+      margin-top: 0.5*@GGW;
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      position: relative;
+      top: 4px;
+      text-decoration: none;
+    }
+    
+    img {
+      display: none;
+    }
+    
+    a:before {
+      content: "\f055";
+      font-size: 16px;
+      color: @green;
+    }
+  }  
+}
+
+#operation_form #operation_contact_id_add_link,
+#order_form #order_contact_id_add_link,
+.checklist-item span.icon-add {
+  margin-right: 8px;
+  margin-top: 0.5*@GGW;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  position: relative;
+  top: 4px;
+  text-decoration: none;
+    
+    img {
+      display: none;
+    }
+    
+    &:before {
+      content: "\f055";
+      font-size: 16px;
+      color: @green;
+    }
+}
+
+.checklist-item span.icon-add.icon {
+  padding-left: 0;
+}
+
+.checklist-item span.icon-add.icon:hover {
+  cursor: pointer;
+}
+
+.fa-external-link:before {
+  font-size: 14px !important;
+}
+
+/*Hide images*/
+.controller-documents .attachments p a:nth-child(2) img, .controller-wiki .attachments p a:nth-child(2) img, .time-entries td.buttons a:first-child img, .time-entries td.buttons a:last-child img, .edit_issue #all_attributes > p:nth-child(5) img, .delete img, .controller-reports h3 a img, table.list td.reorder a img, .controller-workflows form p a img, .controller-workflows.action-edit table.list img, #commit-keywords td.buttons a.add-commit-keywords img, #commit-keywords td.buttons a.delete-commit-keywords img, #history div.journal .wiki.editable .contextual a:first-child img, #history div.journal .wiki.editable .contextual a:last-child img, #deal_contact_id_add_link img, #expense_contact_id_add_link img, #invoice_contact_id_add_link img, #ticket_data .attachment a:last-child img, #relations tr.issue .buttons a img, .controller-messages .message.reply > .contextual a:nth-child(1) img, .controller-messages .message.reply > .contextual a:nth-child(2) img, .controller-messages .message.reply > .contextual a:nth-child(3) img, table.list.files td.buttons a img, .controller-wiki .contextual a:first-child img, .issue .attachments .contextual > a img, .message .attachments .contextual > a img, .controller-messages .message.reply > .contextual a:nth-child(4) img, #invoice_payments .contextual > a img, .controller-invoices #comments .contextual > a img, #content div.attachments .contextual > a img, #content #comments .contextual > a img {
+  display: none !important;
+}
+
+#sidebar #watchers .delete img {
+  display: inline-block !important;
+}
+
+/*Hide background images*/
+.fa, .fa.icon,
+.controller-sprints .contextual .icon,
+.controller-product_backlog .contextual .icon,
+#rdb-refresh,
+.rdb-checkbox-link,
+#rdb-reset,
+#rdb-option-fullscreen {
+  background-image: none !important; 
+}
+
+#top-menu .df {
+  background: url("../../images/default-icon.png") no-repeat left center;
+  margin-left: 20px;
+}
+
+#top-menu .df.fa {
+  background: none;
+  margin-left: 0;
+}
+
+.fa.fa-caret-right:before, .fa.fa-caret-left:before {
+  margin-right: 0 !important;
+}
+
+tr.issue.idnt td.subject a.fa:before {
+  margin-right: 8px !important;
+}
+
+.contextual .icon-stop:before, .contextual .icon-start:before {
+  font-size: 16px;
+}
+
+.icon-start, .icon-stop {
+  padding-left: 0 !important;
+}
+
+#account .icon-stop:before, .contextual .icon-stop:before {
+  content: "\f04d";
+  color: @icon-color;
+}
+
+#account .icon-stop:hover:before, .contextual .icon-stop:hover:before {
+  color: @red;
+}
+
+#account .icon-start:before, .contextual .icon-start:before {
+  content: "\f01d";
+  color: @green;
+}
+
+#account .icon-start:hover:before, .contextual .icon-start:hover:before {
+  color: @green;
+}
+
+a.remove-upload:before, .fa-exclamation-circle:before, .fa-exclamation-triangle:before {
+  content: "\f00d";
+  color: @red;
+}
+
+.fa-plus-circle:before, #header #main-menu li a.new-issue:hover:before {
+  color: @green !important;
+}
+
+.fa-plus-circle:before {
+  .transition;
+}
+
+.fa-plus-circle:hover:before,
+.fa-plus-circle:focus:before {
+  .rotate;
+}
+
+#header #main-menu li a.new-issue:before {
+  color: @white;
+}
+
+.my-project.fa-star:before {
+  color: @yellow !important;
+}
+
+.fa-check:before, .fa-floppy-o:before, .fa-arrow-circle-right:before, .fa-bullseye:before, .icon-time-add:before {
+  color: @green;
+}
+
+.fa-times:before, .fa-arrow-circle-left:before {
+  color: @red;
+}
+
+.fa-times:before {
+  .transition;
+}
+
+.fa-times:hover:before,
+.fa-times:focus:before {
+  .rotate;
+}
+
+.icon-projects:before, .icon-package:before {
+  font-size: @BFS !important;
+}
+
+.fa-pencil-square-o:before, .fa-rss-square:before {
+  color: @orange;
+}
+
+
+
+#content > .contextual a.fa-pencil-square-o:before {
+  content: none !important;
+}
+
+.toggle-multiselect:before {
+  content: "\f0fe";
+}
+
+/* ------------ Repositories ------------ */
+.controller-repositories {
+  
+  .fa:before {
+    content: none;
+  }
+  .icon-folder { background-image: url(../../../../images/folder.png); }
+  .open .icon-folder { background-image: url(../../../../images/folder_open.png); }
+  .icon-file { background-image: url(../../../../images/files/default.png); }
+  .icon-file.text-plain { background-image: url(../../../../images/files/text.png); }
+  .icon-file.text-x-c { background-image: url(../../../../images/files/c.png); }
+  .icon-file.text-x-csharp { background-image: url(../../../../images/files/csharp.png); }
+  .icon-file.text-x-java { background-image: url(../../../../images/files/java.png); }
+  .icon-file.text-x-javascript { background-image: url(../../../../images/files/js.png); }
+  .icon-file.text-x-php { background-image: url(../../../../images/files/php.png); }
+  .icon-file.text-x-ruby { background-image: url(../../../../images/files/ruby.png); }
+  .icon-file.text-xml { background-image: url(../../../../images/files/xml.png); }
+  .icon-file.text-css { background-image: url(../../../../images/files/css.png); }
+  .icon-file.text-html { background-image: url(../../../../images/files/html.png); }
+  .icon-file.image-gif { background-image: url(../../../../images/files/image.png); }
+  .icon-file.image-jpeg { background-image: url(../../../../images/files/image.png); }
+  .icon-file.image-png { background-image: url(../../../../images/files/image.png); }
+  .icon-file.image-tiff { background-image: url(../../../../images/files/image.png); }
+  .icon-file.application-pdf { background-image: url(../../../../images/files/pdf.png); }
+  .icon-file.application-zip { background-image: url(../../../../images/files/zip.png); }
+  .icon-file.application-x-gzip { background-image: url(../../../../images/files/zip.png); }  
+  tr span.expander {background-image: url(../../../../images/bullet_toggle_plus.png); padding-left: 8px; margin-left: 0; cursor: pointer;}
+  tr.open span.expander {background-image: url(../../../../images/bullet_toggle_minus.png);}
+}
+
+
+@media (max-width: 560px) {
+  
+  #header #main-menu li a.new-issue:before {
+    content: "\f067";
+  }
+  
+  #quick-search label a:before {
+    content: "\f002";
+    font-size: 16px !important;
+    color: @icon-color;
+    line-height: 40px;
+  }
+  
+  #main-menu:before {
+    display: inline-block;
+    font: normal normal normal 30px/1 FontAwesome !important;
+    color: @nav-color;
+    font-size: inherit;
+    text-rendering: auto;
+    margin: 6px 0 0 12px;
+    content: "\f039";
+    cursor: pointer;
+  }
+}  
+
+
+  
+  
+  
+  
+  
+  

@@ -1,0 +1,511 @@
+@import url("variables.less");
+@import url("mixins.less");
+
+/***** Menus *****/
+
+#top-menu {
+  background: @nav-color url('../../images/logo.png') no-repeat 10px 12px !important;
+  color: @white; 
+  min-height: 45px; 
+  padding-top: 0.5*@GGW;
+  font-size: @BFS;
+  width: 100%;
+  position: relative;
+  
+    a.home-link {
+      height: 50px;
+      left: 0;
+      padding: 0;
+      position: absolute;
+      top: 0;
+      width: 50px;
+    }
+    
+    span {
+      float: none !important;
+    }
+    
+    > ul {
+      margin: 0;  
+      padding: 0 0 0 50px;
+      max-width: 82%;
+    }
+    
+    #account ul:after, #account ul:before {
+    	bottom: 100%;
+    	right: 12px;
+    	border: solid transparent;
+    	content: " ";
+    	height: 0;
+    	width: 0;
+    	position: absolute;
+    	pointer-events: none;
+    }
+    
+    #account ul ul:before, #account ul ul:after {
+       content: none;
+     }
+     
+     #account ul ul, #account ul ul {
+       position: static !important;
+       background: none !important;
+       box-shadow: none !important;
+       padding: 0;
+     }
+     
+     
+     #account ul:after {
+     	border-color: rgba(255, 255, 255, 0);
+     	border-bottom-color: @white;
+     	border-width: 8px;
+     	margin-left: -8px;
+     }
+     
+     #account ul:before {
+     	border-color: rgba(231, 231, 231, 0);
+     	border-bottom-color: #e7e7e7;
+     	border-width: 8px;
+     	margin-left: -8px;
+     }
+    
+     #account li {
+       display: block;
+       float: none;
+       text-align: right;
+       line-height: 22px;
+     }
+     
+     #account li a {
+       color: @text-color;
+       font-size: 12px;
+       padding: 0;
+       margin: 0;
+     }
+     
+     li {
+       display: block;
+       float: left;
+       list-style-type:none;
+       margin: 0;
+       padding: 0;
+       white-space: nowrap;
+       line-height: 40px;
+     }
+     
+     #account li+li a {
+       padding-left: 0;
+     }
+     
+     a {
+       color: @border-color; 
+       font-weight: normal;
+       padding: @GGW 0 @GGW 2*@GGW;
+       margin: 0;
+     }
+     
+     a.df {
+      padding: @GGW 0 @GGW 22px; 
+     }
+     
+     a.df.fa {
+      padding: @GGW 0 @GGW 20px; 
+     }
+     
+     .more {
+       color: @border-color;
+     }
+     
+     a:hover, a:hover:before, .more:hover {
+       color: @white;
+       text-decoration: none;
+     }  
+     
+     ul a:before, #loggedas a:before, #account:before {
+       color: lighten(@nav-color,40%);
+       font-size: 18px;
+       margin-right: 8px;
+     }
+     
+     ul a:before {
+       line-height: 40px;
+     }
+     
+     #loggedas a:before, #account:before {
+       line-height: 35px;
+     }
+     
+     #loggedas .fa-line-chart:before {
+       position: absolute;
+       display: block;
+       left: 50%;
+       margin-left: (-@GGW + 1px);
+       color: @white;
+     }
+     
+     #account:before {
+       color: @white;
+       padding-left: 4px;
+     }
+     
+     #account.fa {
+       padding: 0 0 0 7px;
+     }
+     
+     /*More icon styles*/
+         
+     > ul .menu-children {
+       display: none !important;
+     }
+     
+     > ul .more {
+       display: block;
+       float: left;
+       height: 40px;
+       width: 60px;
+       line-height: 40px;
+       position: relative;
+       padding-left: 1.5*@GGW;
+     }
+     
+     > ul .more:before {
+       content: "\f055";
+       color: lighten(@nav-color,40%);
+       font-size: 18px;
+     }
+     
+     > ul .more .ul {
+       position: absolute;
+       left: -9999px;
+     }     
+     
+     > ul .more:hover .ul,
+     > ul .more:hover .ul:hover {
+       .rounded;
+       top: 36px;
+       left: 0;
+       background: @white;
+       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+       padding: @GGW;
+       z-index: 999;
+     }
+     
+     > ul .more:hover li, > ul .more:hover li a {
+       font-size: @BFS !important;
+       padding: 0;
+       margin: 0;
+       display: block;
+       float: none;
+       line-height: 30px;
+     }
+     
+     > ul .more:hover li a.df {
+       padding-left: 17px;
+     }
+     
+     > ul .more:hover li a.df.fa{
+       padding-left: 0;
+     }
+     
+     .more:hover .ul:after, .more:hover .ul:before {
+       bottom: 100%;
+       left: 22px;
+       border: solid transparent;
+       content: " ";
+       height: 0;
+       width: 0;
+       position: absolute;
+       pointer-events: none;
+     }
+     
+     .more:hover .ul:after {
+     	 border-color: rgba(255, 255, 255, 0);
+     	 border-bottom-color: @white;
+     	 border-width: 8px;
+     	 margin-left: -8px;
+     }
+     
+     .more:hover .ul:before {
+       border-color: rgba(231, 231, 231, 0);
+       border-bottom-color: #e7e7e7;
+       border-width: 8px;
+       margin-left: -8px;
+     }
+     
+     .more li a {
+       color: @nav-color; 
+     }
+     
+     .more a:hover, .more a:hover:before  {
+       color: lighten(@nav-color,40%) !important; 
+     }
+     
+     #loggedas {
+       color: #243133;
+       float: right;
+       font-size: 0;
+     }
+     
+     #loggedas a {
+       .rounded;
+       color: @nav-color;
+       border: 1px solid @nav-color;
+       width: 35px;
+       height: 35px;
+       float: right;
+       padding: 0;
+       margin: 0 0.5*@GGW 0 0;
+       position: relative;
+     }
+     
+     #loggedas a:hover {
+       text-decoration: none;
+       border: 1px solid lighten(@nav-color,10%);
+       box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+     }
+          
+}
+
+
+
+/* ------------ Account ------------ */
+  
+#account {
+  .rounded;
+  font-size: @BFS;
+  height: 35px;
+  width: 28px;
+  float: right;
+  margin: 0 2*@GGW 0 0 !important;
+  border: 1px solid @nav-color;
+  
+    ul {
+      .rounded;
+      position: absolute;
+      top: -9999px;
+      right: 18px;
+      background: @white;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      padding: @GGW;
+      z-index: 999;
+    }
+    
+    &:hover {
+      border: 1px solid lighten(@nav-color,10%);
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+      margin-top: 1px;
+    }
+    
+    &:hover ul, ul:hover,
+    &:focus ul, ul:focus,
+    &:active ul, ul:active {
+      top: 40px;
+    }
+}
+
+
+
+/* ------------ Header ------------ */
+
+#header {
+  margin: 0;
+  background: @white;
+  line-height: 40px;
+  background: lighten(@gray-lighter,4%); 
+  
+    a {
+      color: @white;
+    }
+    
+    h1 {
+      word-wrap: break-word;
+    }
+    
+    h1 a.ancestor {
+      font-size: 80%;
+    }
+    
+    h1 a {
+      color: @link-color;
+    }
+    
+      #quick-search {
+        float: right;
+        padding: 7px @GGW 7px 0;
+        margin: 0 !important;
+      }
+      
+      #quick-search input {
+        width: 130px;
+        height: 28px;
+      }
+      
+      #quick-search label {
+        color: @text-color;
+      }
+      
+      #quick-search a {
+        color: @link-color;
+      }
+      
+      #quick-search form {
+        display: inline-block;
+      }
+      
+      
+      /* ------------ Main menu ------------ */
+      
+      #main-menu {
+        width: 100%;
+        border-bottom: 1px solid @border-color;
+        border-top: 1px solid @border-color;
+        background: @white;
+        position: relative;
+        clear: both;
+        padding: 2px 0;
+        
+          ul {
+            margin: 0;
+            padding: 0 0 0 @GGW;
+          }
+          
+          li {
+            float: left;
+            list-style-type: none;
+            padding: 0;
+            white-space: nowrap;
+          }
+          
+          li a.new-issue:hover,
+          li a.new-issue:focus,
+          li a.new-issue:active {
+             background: @green !important;
+             border: 1px solid darken(@green, 10%);
+          }
+          
+          li a {
+            display: block;
+            color: @text-color;
+            text-decoration: none;
+            margin: 0.5*@GGW 0.5*@GGW 0.5*@GGW 0;
+            padding: 0 15px;
+            line-height: 30px;
+            font-size: 12px;
+            font-weight: normal;
+          }
+          
+          li a:hover, li a.selected, li a.selected:hover, li a.new-issue:hover {
+            .rounded;
+            background: @red; 
+            color: @white;
+          } 
+          
+          #new-object {
+            .btn;
+            .gradient-green;
+            .rounded;
+            margin-top: 2px;
+          }
+          
+          li:first-child {
+            position: relative;
+          }
+          
+          li:first-child:hover ul.menu-children, 
+          li:first-child:hover ul.menu-children.visible {
+            display: block;
+            left: 0;
+          }
+          
+          .menu-children {
+            .rounded;
+            position: absolute;
+            left: -9999px;
+            top: 37px;
+            background: @white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            padding: @GGW;
+            z-index: 999;
+            display: inline-block !important;
+          }
+          
+          .menu-children:after, .menu-children:before {
+            bottom: 100%;
+            left: 22px;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            
+            border-color: rgba(255, 255, 255, 0);
+            border-bottom-color: @white;
+            border-width: 8px;
+            margin-left: -8px;
+          }
+          
+          .menu-children li {
+            clear: both;
+            float: left;
+            width: 100%;
+          }
+      }
+      
+      div#main-menu li a.new-issue {
+        .rounded;
+        .btn;
+        display: block !important;
+        background: @green;
+        border: 1px solid @green;
+        color: @white;
+      }  
+      
+}
+
+
+
+/* ------------ Admin menu ------------ */
+
+#admin-menu {
+    
+    ul {
+      margin: 0;  
+      padding: 0;
+    }
+    
+    li {
+      margin: 0;
+      padding: 0 0 0.5*@GGW 0;
+      list-style-type:none;
+    }
+    
+    a {
+      background-position: 0% 40%;
+      background-repeat: no-repeat;
+      padding: 2px 0 2px 20px;
+    }
+    
+    a.fa {
+      padding-left: 0;
+    }
+    
+    a.projects, 
+    a.users, 
+    a.groups, 
+    a.roles, 
+    a.trackers, 
+    a.issue_statuses, 
+    a.workflows, 
+    a.approvalworkflows, 
+    a.custom_fields, 
+    a.enumerations, 
+    a.settings, 
+    a.plugins, 
+    a.info, 
+    a.contacts, 
+    a.server_authentication {
+      background-image: none;  
+    }
+    
+    a.approvalworkflows {background-image: none !important;} 
+}
